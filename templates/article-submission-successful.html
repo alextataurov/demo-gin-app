@@ -1,0 +1,6 @@
+{{ template "header.html" .}}
+<div class="container p-4">
+    <p>The article has been successfully submitted.</p>
+    <a href="/article/view/{{.payload.ID}}">{{.payload.Title}}</a>
+</div>
+{{ template "footer.html" .}}

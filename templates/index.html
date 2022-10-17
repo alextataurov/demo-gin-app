@@ -1,0 +1,21 @@
+{{ template "header.html" .}}
+<div class="container p-4">
+    <h2>Home page</h2>
+    <table class="table"> 
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Content</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{ range .payload }}
+            <tr>
+                <td class="text-nowrap"><a href="/article/view/{{.ID}}"><strong>{{ .Title }}</strong></a></td>
+                <td>{{ .Content }}</td>
+            </tr>
+            {{ end }}
+        </tbody>
+    </table>
+</div>
+{{ template "footer.html" .}}
